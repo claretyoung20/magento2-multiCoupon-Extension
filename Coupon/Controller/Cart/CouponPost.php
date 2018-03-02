@@ -126,7 +126,7 @@ class CouponPost extends \Magento\Checkout\Controller\Cart
                             }
                         }
                         // procede to save
-                        $cartQuote->setCouponCode ($isCodeLengthValid ? $couponCode : '')->collectTotals ();
+                        $cartQuote->setCouponCode ($isCodeLengthValid ? $couponUpdate : '')->collectTotals ();
                         $cartQuote->setCouponCode ($couponUpdate)->save ();
                     }
                 } else {

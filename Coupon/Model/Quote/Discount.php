@@ -37,21 +37,19 @@ class Discount extends \Magento\SalesRule\Model\Quote\Discount
         }
 
         $couponCode = $quote->getCouponCode();
-        $couponArray = explode(',', $couponCode);
+        $couponArray = array_unique(explode(',',$couponCode));
 
-        foreach ($couponArray as $couponCode) {
-            $this->_calculator->init($store->getWebsiteId(), $quote->getCustomerGroupId(), $couponCode);
-            $this->_calculator->initTotals($items, $address);
+        foreach ($couponArray as $couponCodeValue) {
+
+            $this->calculator->init($store->getWebsiteId(), $quote->getCustomerGroupId(), $couponCodeValue);
+            $this->calculator->initTotals($items, $address);
 
             $eventArgs = array(
                 'website_id' => $store->getWebsiteId(),
                 'customer_group_id' => $quote->getCustomerGroupId(),
-                'coupon_code' => $couponCode,
+                'coupon_code' => $couponCodeValue,
             );
 
-
-            $this->calculator->init($store->getWebsiteId(), $quote->getCustomerGroupId(), $quote->getCouponCode());
-            $this->calculator->initTotals($items, $address);
 
             $address->setDiscountDescription([]);
             $items = $this->calculator->sortItemsByPriority($items, $address);
@@ -106,11 +104,12 @@ class Discount extends \Magento\SalesRule\Model\Quote\Discount
             }
 
             $this->calculator->prepareDescription($address);
-            $total->setDiscountDescription($address->getDiscountDescription());
-            $total->setSubtotalWithDiscount($total->getSubtotal() + $total->getDiscountAmount());
-            $total->setBaseSubtotalWithDiscount($total->getBaseSubtotal() + $total->getBaseDiscountAmount());
-            return $this;
+//            $total->setDiscountDescription($address->getDiscountDescription());
+//            $total->setSubtotalWithDiscount($total->getSubtotal() + $total->getDiscountAmount());
+//            $total->setBaseSubtotalWithDiscount($total->getBaseSubtotal() + $total->getBaseDiscountAmount());
+
         }
+        return $this;
     }
 
 }
