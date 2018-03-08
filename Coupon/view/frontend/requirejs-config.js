@@ -9,7 +9,9 @@ var config = {
             discountCodeCoupon: 'Claret_Coupon/js/discount-codes',
             'Magento_SalesRule/js/view/cart/totals/discount':'Claret_Coupon/js/view/cart/totals/discount',
             'Magento_SalesRule/js/view/summary/discount':'Claret_Coupon/js/view/summary/discount',
-            'Magento_SalesRule/template/cart/totals/discount.html':'Claret_Coupon/template/cart/totals/discount.html'
+            'Magento_SalesRule/template/cart/totals/discount.html':'Claret_Coupon/template/cart/totals/discount.html',
+            'Magento_SalesRule/js/view/payment/discount':'Claret_Coupon/js/view/payment/discount',
+            'Magento_SalesRule/template/payment/discount.html':'Claret_Coupon/template/payment/discount.html'
         }
     }
 };

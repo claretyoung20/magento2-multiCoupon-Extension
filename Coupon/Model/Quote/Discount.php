@@ -104,9 +104,9 @@ class Discount extends \Magento\SalesRule\Model\Quote\Discount
             }
 
             $this->calculator->prepareDescription($address);
-//            $total->setDiscountDescription($address->getDiscountDescription());
-//            $total->setSubtotalWithDiscount($total->getSubtotal() + $total->getDiscountAmount());
-//            $total->setBaseSubtotalWithDiscount($total->getBaseSubtotal() + $total->getBaseDiscountAmount());
+            $total->setDiscountDescription($address->getDiscountDescription());
+            $total->setSubtotalWithDiscount($total->getSubtotal() + $total->getDiscountAmount());
+            $total->setBaseSubtotalWithDiscount($total->getBaseSubtotal() + $total->getBaseDiscountAmount());
 
         }
         return $this;

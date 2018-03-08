@@ -19,7 +19,8 @@ define([
          * @returns {Boolean}
          */
         isDisplayed: function () {
-            return this.getPureValue() != 0; //eslint-disable-line eqeqeq
+            this.getPureValue() !== 0; //eslint-disable-line eqeqeq
+            return true;
         }
     });
 });

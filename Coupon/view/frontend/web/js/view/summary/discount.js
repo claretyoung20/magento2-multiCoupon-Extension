@@ -19,7 +19,7 @@ define([
          * @return {*|Boolean}
          */
         isDisplayed: function () {
-            return this.isFullMode() && this.getPureValue() != 0; //eslint-disable-line eqeqeq
+            return this.isFullMode() && this.getPureValue() !== 0; //eslint-disable-line eqeqeq
         },
 
         /**
@@ -29,7 +29,6 @@ define([
             if (!this.totals()) {
                 return null;
             }
-
             return this.totals()['coupon_code'];
         },
 
@@ -50,9 +49,12 @@ define([
         getPureValue: function () {
             var price = 0;
 
+
             if (this.totals() && this.totals()['discount_amount']) {
                 price = parseFloat(this.totals()['discount_amount']);
             }
+
+            // debugger;
 
             return price;
         },
