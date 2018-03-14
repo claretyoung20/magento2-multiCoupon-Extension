@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="context" xsi:type="configurableObject">
+        <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\Context</argument>
+        <argument name="namespace" xsi:type="string">hello_world_grid</argument>
+        <!-- this should be same as the file name or uicomponentname -->
+    </argument>
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">hello_world_grid.claret_coupon_grid_data_source</item>
+            <!-- the format here is uicomponentname.datasourcename -->
+            <item name="deps" xsi:type="string">hello_world_grid.claret_coupon_grid_data_source</item>
+            <!-- the format here is uicomponentname.datasourcename -->
+        </item>
+        <item name="spinner" xsi:type="string">hello_world_columns</item>
+        <!-- the format here is columns name defined below -->
+        <item name="buttons" xsi:type="array">
+            <!-- here we can add buttons -->
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New Item</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">*/*/new</item>
+            </item>
+        </item>
+    </argument>
+</listing>
