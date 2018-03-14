@@ -27,7 +27,7 @@
                                id="discount-code"
                                name="discount_code"
                                data-validate="{'required-entry':true}"
-                               data-bind="attr:{placeholder: $t('Enter discount code')} " />
+                               data-bind="value: couponCode, attr:{placeholder: $t('Enter discount code')} " />
                     </div>
                 </div>
             </div>
@@ -36,9 +36,11 @@
                     <button class="action action-apply" type="submit" data-bind="'value': $t('Apply Discount'), click: apply">
                         <span><!-- ko i18n: 'Apply Discount'--><!-- /ko --></span>
                     </button>
+                    <button class="action action-cancel" type="submit" data-bind="'value': $t('Cancel'), click: cancel">
+                        <span><!-- ko i18n: 'Cancel coupon'--><!-- /ko --></span>
+                    </button>
                 </div>
             </div>
-
         </form>
     </div>
 </div>
