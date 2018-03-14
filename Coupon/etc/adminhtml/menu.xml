@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Claret_Coupon::hello" title="Claret" module="Claret_Coupon" sortOrder="15" dependsOnModule="Claret_Coupon" resource="Claret_Coupon::hello"/>
+        <add id="Claret_Coupon::test" title="Test1" module="Claret_Coupon" sortOrder="10" parent="Claret_Coupon::hello" action="hello/world" resource="Claret_Coupon::test"/>
+
+        <!--<add id="Claret_Coupon::helloworld" title="Hello World" module="Claret_Coupon" sortOrder="51" resource="Claret_Coupon::helloworld"/>
+        <add id="Claret_Coupon::post" title="Manage Posts" module="Claret_Coupon" sortOrder="10" action="Claret_Coupon/post" resource="Claret_Coupon::post" parent="Claret_Coupon::helloworld"/>
+        <add id="Claret_Coupon::hello_configuration" title="Configuration" module="Claret_Coupon" sortOrder="99" parent="Claret_Coupon::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Claret_Coupon::helloworld_configuration"/>
+-->
+    </menu>
+</config>
