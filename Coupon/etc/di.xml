@@ -15,5 +15,5 @@
         </arguments>
     </virtualType>
 
-    <!--<preference for="Magento\SalesRule\Model\Quote\Discount" type="Claret\Coupon\Model\Quote\Discount" />-->
+    <!--<preference for="Magento\SalesRule\Model\ResourceModel\Rule\Collection" type="Claret\Coupon\Model\ResourceModel\Rule\Collection" />-->
 </config>

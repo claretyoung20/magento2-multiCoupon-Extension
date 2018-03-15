@@ -3,4 +3,5 @@
     <preference for="Magento\Checkout\Block\Cart\Coupon" type="Claret\Coupon\Block\Cart\Coupon" />
     <preference for="Magento\Checkout\Controller\Cart\CouponPost" type="Claret\Coupon\Controller\Cart\CouponPost" />
     <!--<preference for="Magento\SalesRule\Model\Quote\Discount" type="Claret\Coupon\Model\Quote\Discount" />-->
+    <!--<preference for="Magento\SalesRule\Model\ResourceModel\Rule\Collection" type="Claret\Coupon\Model\ResourceModel\Rule\Collection" />-->
 </config>
