@@ -17,7 +17,9 @@ class Index extends Action
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Claret_Coupon::test');
-        $resultPage->getConfig()->getTitle()->prepend(__('WELCOME MARY..'));
+        $resultPage->addBreadcrumb(__('Grid'), __('Grid'));
+        $resultPage->addBreadcrumb(__('Post Grid'), __('Posting Grid'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Create, Edit and Delete Post'));
         return $resultPage;
     }
 }

@@ -4,17 +4,16 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="hello_world_grid.claret_coupon_grid_data_source" xsi:type="string">Claret\Coupon\Model\ResourceModel\Post\Grid\Collection</item>
+                <item name="claret_coupon_grid_data_source" xsi:type="string">Claret\Coupon\Model\ResourceModel\Post\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
-    <!--<virtualType name="Claret\Coupon\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="Claret\Coupon\Model\ResourceModel\Post\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
-            <argument name="mainTable" xsi:type="string">mageplaza_helloworld_post</argument>
-            <argument name="resourceModel" xsi:type="string">Mageplaza\HelloWorld\Model\ResourceModel\Post</argument>
+            <argument name="mainTable" xsi:type="string">claret_post</argument>
+            <argument name="resourceModel" xsi:type="string">Claret\Coupon\Model\ResourceModel\Post</argument>
         </arguments>
     </virtualType>
-  -->
 
     <!--<preference for="Magento\SalesRule\Model\Quote\Discount" type="Claret\Coupon\Model\Quote\Discount" />-->
 </config>
